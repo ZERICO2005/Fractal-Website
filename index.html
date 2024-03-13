@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABS-Mandelbrot-Generator</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+  <script src="./render.js" defer></script>
+</head>
+
+<body>
+  <h1>
+    Fractal Formula Generator
+  </h1>
+  <p>
+    Automatically generate Fractal Formulas by entering an ID Number.
+  </p>
+  <p></p>
+  <label for="id">ID Number:</label>
+  <input type="number" id="enter" placeholder="0">
+  <p></p>
+  <button id="generate2" class="generator">Generate Quadratic Formula</button>
+  <button id="generate3" class="generator">Generate Cubic Formula</button>
+  <button id="generate4" class="generator">Generate Quartic Formula</button>
+  <button id="generate5" class="generator">Generate Quintic Formula</button>
+  <p></p>
+  <!--
+<form>
+  <select id="resolutionSelect">
+    <option value="0">128x128</option>
+    <option value="1">180x180</option>
+    <option value="2">256x256</option>
+    <option value="3">360x360</option>
+    <option value="4">512x512</option>
+    <option value="5">720x720</option>
+    <option value="6">1024x1024</option>
+  </select>
+</form>
+  <form>
+  <select id="iterationSelect">
+    <option value="0">64</option>
+    <option value="1">90</option>
+    <option value="2">128</option>
+    <option value="3">180</option>
+    <option value="4">256</option>
+    <option value="5">360</option>
+    <option value="6">512</option>
+  </select>
+    -->
+  </form>
+  <canvas id="renderWindow"></canvas>
+
+  <!--<div id="binary">
+      Binary: <span></span>
+    </div>-->
+
+  <div id="hide">
+    <label for="id">Java and JS: </label><button onclick="copyJava()" class="copier">Copy</button>
+    <div id="java" class="output">
+      <span></span>
+    </div>
+    <label for="id">C and C++: </label><button onclick="copyCPP()" class="copier">Copy</button>
+    <div id="cpp" class="output">
+      <span></span>
+    </div>
+    <label for="id">GLSL: </label><button onclick="copyGLSL()" class="copier">Copy</button>
+    <div id="glsl" class="output">
+      <span></span>
+    </div>
+  </div>
+  <p></p>
+  <button onclick="aboutToggle()" class="aboutButton">About</button>
+  <div id="about">
+    <p>
+      Click one of the buttons to generate a Quadratic (0-255), Cubic (0-16383), Quartic (0-131071), or Quintic (0-1048576) ABS Mandelbrot
+      formula.
+    </p>
+    <p>
+      The program supports syntax for Java, JS, C, C++, and GLSL.
+    </p>
+    <p>
+      ABS Formula Version: 2.1
+    </p>
+    <p>
+      Made by zerico2005<br>
+      Also checkout: <a href="https://youtu.be/NDi_4DVy8-E">330 Cubic Fractals</a>
+    </p>
+  </div>
+</body>
+
+</html>
